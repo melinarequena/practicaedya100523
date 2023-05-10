@@ -6,13 +6,5 @@
 #define PRACTICAEDYA100523_PERSONA_H
 
 
-typedef struct persona{
-    int edad;
-    int dni;
-    char nombre[30];
-}Persona;
 
-Persona * newPersona();
-void cargarPersonas();
-void imprimirPersonas(Persona *);
 #endif //PRACTICAEDYA100523_PERSONA_H

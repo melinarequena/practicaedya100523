@@ -1,8 +1,12 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include"Persona.h"
 
+typedef struct persona{
+    int dni;
+    struct persona *amigo;  //cada persona apunta a una direccion de memoria de su conocido
+}Persona;
+Persona * newPersona(int);
 int main(){
     Persona * Melina = newPersona(45924375);
     Persona *  Barbie = newPersona(22656451);
@@ -16,4 +20,16 @@ int main(){
     Sergio ->amigo = LilaNTLP;
     Sergio ->amigo = LilaNTLP;
     return 0;
+}
+Persona * newPersona(int dni){
+    Persona * aux = NULL;
+    aux = malloc(sizeof(Persona));
+    if(aux == NULL){
+        printf("Error al asignar memoria\n");
+        exit -1;
+    }
+    aux->dni = dni;
+    aux->amigo = NULL;
+
+    return aux;
 }
