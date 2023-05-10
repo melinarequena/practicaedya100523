@@ -3,4 +3,4 @@ project(practicaedya100523 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(practicaedya100523 main.c Persona.c Persona.h)
+add_executable(practicaedya100523 main.c Persona.c Persona.h .idea/Persona.c .idea/Persona.h)
